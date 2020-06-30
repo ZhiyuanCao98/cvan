@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring'
 import ReactPageScroller from 'react-page-scroller'
 import HomeScrollPage from './HomeScrollPage'
 import { AiFillDownCircle } from "react-icons/ai"
+
+
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 20}px,${y / 20}px,0)`
 const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
@@ -23,9 +25,10 @@ function RootPage() {
     };
 
     const { radians } = useSpring({
-        to: async next => {
-            while (1) await next({ radians: 2 * Math.PI })
-        },
+        // to: async next => {
+        //     while (1) await next({ radians: 2 * Math.PI })
+        // },
+        // to:
         from: { radians: 0 },
         config: { duration: 3500 },
         reset: true,
@@ -58,8 +61,9 @@ function RootPage() {
                     <animated.div class="card4" style={{ transform: props.xy.interpolate(trans4) }} />
                 </div> */}
                 </animated.div>
-                <animated.div style={{ transform: radians.interpolate(interp())}} >
-                <h3 className='scroll'> --- Scroll <AiFillDownCircle /> Down --- </h3>
+                {/* <animated.div style={{ transform: radians.interpolate(interp)}} > */}
+                <animated.div>
+                <h3 className='scroll'> ----- Scroll <AiFillDownCircle /> Down ----- </h3>
                 </animated.div>
             </div>
             <HomeScrollPage />

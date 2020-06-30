@@ -9,7 +9,8 @@ function HomeScrollPage() {
         <div className='scrollBackground'>
         <div className="homeBackground">
             <div className='normalPageContainer'>
-                <h1>hello</h1>
+                {/* <h1>I like Summer and sea</h1>
+                <h1> Try to know me!</h1> */}
             </div>
         </div>
         </div>
