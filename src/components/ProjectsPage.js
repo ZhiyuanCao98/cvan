@@ -32,7 +32,9 @@ function ProjectItem(props) {
                     <div>
                         <div className='projectTitle'>{data.title}</div>
                         <div className='projectDate'>{data.date}</div>
-                        <div className='projectDescription'>{data.description}</div>
+                        {data.color ? <div className='projectDescription' style={{color: data.color}}>{data.description}</div>
+                        : <div className='projectDescription'>{data.description}</div>}
+                        
                     </div>
                 }
             </a>
@@ -79,11 +81,24 @@ function ProjectsPage() {
                 title: 'EmojiUFace',
                 description: 'This program can instantly recognizes user’s facial expression from camera and generate a corresponding emoji.',
                 backgroundPath: "/projects/emojiUFace.png",
-                date: '2020-04'
+                date: '2020-04',
+                color: '#17C8FF'
             }
         },
         {
             id: 1,
+            data: {
+                hasLink: true,
+                href: 'https://github.com/q463746583/AI-Learning',
+                title: 'AI-Pacman',
+                description: 'Based on the pacman projects, to implement Search, multi agent and reinforcement learning',
+                backgroundPath: "/projects/pacman.png",
+                date: '2020-03',
+                color: '#17C8FF',
+            }
+        },
+        {
+            id: 5,
             data: {
                 hasLink: true,
                 href: 'https://github.com/q463746583/Raft-Implementation/tree/master',
@@ -122,7 +137,8 @@ function ProjectsPage() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     return (
-        <div class="projectPageContainer">
+        <div>
+        <div class="projectPageContainer"> </div>
             <div className="normalPageContainer">
                 <div className='projectTitleContainer'>
                     {/* <div className="projectsTitle"><h2>Projects Page</h2></div> */}

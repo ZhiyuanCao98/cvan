@@ -6,6 +6,7 @@ import Draggable from 'react-draggable';
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { MdContactMail } from "react-icons/md";
 import { TiBackspaceOutline } from "react-icons/ti";
+import { IoIosMail } from "react-icons/io";
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 10, (x - window.innerWidth / 2) / 10, 1.1]
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 const trans1 = (o) => `opacity(o)`
@@ -73,10 +74,12 @@ const ContactBox = (props) => {
                             </div>
                             <div ><a className="socialIcon" href="https://drive.google.com/file/d/1_Jwm8OBix1olmj43o93aeUzFrE4xm8r2/view?usp=sharing" target="_blank" style={{ color: '#D16BA5' }}> <AiFillFilePdf size={40} /><div> CV </div> </a>
                             </div>
+                            <div ><a className="socialIcon" href="mailto:zhiyuancao.zc@gmail.com" target="_blank" style={{ color: '#D44638' }}> <IoIosMail size={40} /><div> Gmail</div> </a>
+                            </div>
                         </div>
                         <div>-- or --</div>
                         <div className="socialIcon" style={{ width: '8rem' }} onClick={() => setStack(1)}>
-                            <MdContactMail style={{ color: '#D44638' }} size={40} />
+                            <MdContactMail style={{ color: '#16de31' }} size={40} />
                             <div> Levae A message </div>
                         </div>
                     </div>
@@ -158,7 +161,7 @@ function SideBar() {
     const [meumprops1, setMeumprops1] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 20, tension: 300, friction: 100 } }))
     const [meumprops2, setMeumprops2] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 20, tension: 300, friction: 100 } }))
     const [meumprops3, setMeumprops3] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 20, tension: 300, friction: 100 } }))
-    const [fold, setFold] = useState(false)
+    const [fold, setFold] = useState(true)
     const [contactShow, setContactShow] = useState(false)
     const closeContact = () => {
         setContactShow(!contactShow);
@@ -178,7 +181,6 @@ function SideBar() {
                                 className="navFont"
                                 onMouseMove={({ clientX: x, clientY: y }) => setMeumprops({ xys: calc(x, y) })}
                                 onMouseLeave={() => setMeumprops({ xys: [0, 0, 1] })}
-                                onClick={() => setFold(true)}
                                 style={opChange, { marginTop: '10rem', transform: meumprops.xys.interpolate(trans) }}
                             ><MeumItem to="/" title="Home" /></animated.div>
                             <animated.div
