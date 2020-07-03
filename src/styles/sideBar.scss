@@ -5,7 +5,7 @@
   // z-index: 2;
   // background: linear-gradient(45deg, rgb(9, 2, 70) , #3e186d, #9198e5 , rgb(45, 99, 216));
   .nameLink {
-    font-size : 1rem;
+    font-size: 1rem;
     text-decoration: inherit;
     transition: font-size 0.8s;
     font-family: "Copperplate";
@@ -15,9 +15,7 @@
       font-size: 1.5rem;
     }
   }
-  
 }
-
 
 .navbar {
   display: flex;
@@ -32,32 +30,55 @@
     font-family: "Optima";
     margin-top: 5rem;
     color: "black";
-    height:2rem;
+    height: 2rem;
     text-align: center;
     transition: font-size 0.5s, padding 0.5s;
-    
-    @media (min-width: 300px) {
+    @media (min-width: 0px) {
+      font-size: 3.5vw;
+    }
+    @media (min-width: 400px) {
       font-size: 3vw;
     }
-    @media (min-width: 800px) {
-      font-size: 2vw;
+    @media (min-width: 700px) {
+      font-size: 2.3vw;
     }
     @media (min-width: 1000px) {
       font-size: 1.5vw;
     }
+    // @media (min-width: 300px) {
+    //   font-size: 3vw;
+    // }
+    // @media (min-width: 800px) {
+    //   font-size: 2vw;
+    // }
+    // @media (min-width: 1000px) {
+    //   font-size: 1.5vw;
+    // }
 
     .active {
-      padding:0.5rem;
+      opacity: 1;
+      padding: 0.5rem;
       border-radius: 1rem;
-      font-size:1.5rem;
       box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3, 0 0 4rem #2196f3;
+      @media (min-width: 0px) {
+        font-size: 4.5vw;
+      }
+      @media (min-width: 400px) {
+        font-size: 4vw;
+      }
+      @media (min-width: 700px) {
+        font-size: 3vw;
+      }
+      @media (min-width: 1000px) {
+        font-size: 2vw;
+      }
     }
     &:hover {
       box-shadow: 0 0 1rem #ff00b7, 0 0 2rem #ff00b7, 0 0 4rem #2196f3;
       text-decoration-style: solid;
       @media (min-width: 300px) {
         font-size: 4vw;
-        padding : 2vw;
+        padding: 2vw;
       }
       @media (min-width: 800px) {
         font-size: 2vw;
@@ -66,19 +87,33 @@
       border-radius: 1rem;
     }
   }
-  
 }
-
 
 .sideBarContainer {
   position: fixed;
   width: 20%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  
+
   z-index: 2;
   &:hover {
     z-index: 2;
   }
 }
 
+.navFont {
+
+}
+
+.dropDownMenu {
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  color: black;
+  cursor: context-menu;
+  opacity: 1;
+  transition: opacity 0.5s;
+  &:hover {
+    opacity: 0.3;
+  }
+}

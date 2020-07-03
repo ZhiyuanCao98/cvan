@@ -9,7 +9,7 @@ function ProjectItem(props) {
 
     if (data.hasLink) {
         return (
-            <a href={data.href}
+            <a id={props.id} href={data.href}
                 target="_blank" className="projectItemContainer"
                 onMouseEnter={() => { setHover(true) }}
                 onMouseLeave={() => { setHover(false) }}
@@ -26,7 +26,7 @@ function ProjectItem(props) {
                 </div>
 
                 {hover ? <div className='projectWord'>
-                <div className='projectTitle'>{data.title}</div>
+                    <div className='projectTitle'>{data.title}</div>
                     <div> Click to View More</div>
                 </div> :
                     <div>
@@ -73,14 +73,24 @@ function ProjectItem(props) {
 function ProjectsPage() {
     const projects = [
         {
+            id: 0, data: {
+                hasLink: true,
+                href: 'https://github.com/q463746583/EmojiUFace',
+                title: 'EmojiUFace',
+                description: 'This program can instantly recognizes user’s facial expression from camera and generate a corresponding emoji.',
+                backgroundPath: "/projects/emojiUFace.png",
+                date: '2020-04'
+            }
+        },
+        {
             id: 1,
             data: {
                 hasLink: true,
-                href: "https://chatroomcvan.herokuapp.com/",
-                title: 'Chat Room',
-                description: 'A platform permits user create or access a room, and then chat with each other or share personal location.',
-                backgroundPath: "/projects/chatRoom.png",
-                date: '2018-010'
+                href: 'https://github.com/q463746583/Raft-Implementation/tree/master',
+                title: 'Raft-Implementation',
+                description: 'Based on the Raft Conseum Algorithm, build a distributed, Replicated key-value storage',
+                backgroundPath: "/projects/raft.png",
+                date: '2019-04'
             }
         },
         {
@@ -94,37 +104,46 @@ function ProjectsPage() {
                 date: '2018-12'
             }
         },
-        {
-            id: 3, data: {
-                hasLink: true,
-                href: 'https://github.com/q463746583/EmojiUFace',
-                title: 'EmojiUFace',
-                description: 'This program can instantly recognizes user’s facial expression from camera and generate a corresponding emoji.',
-                backgroundPath: "/projects/emojiUFace.png",
-                date: '2020-04'
-            }
-        },
+
         {
             id: 4, data: {
                 hasLink: true,
-                href: 'https://github.com/q463746583/Raft-Implementation/tree/master',
-                title: 'Raft-Implementation',
-                description: 'Based on the Raft Conseum Algorithm, build a distributed, Replicated key-value storage',
-                backgroundPath: "/projects/raft.png",
-                date: '2019-04'
+                href: "https://chatroomcvan.herokuapp.com/",
+                title: 'Chat Room',
+                description: 'A platform permits user create or access a room, and then chat with each other or share personal location.',
+                backgroundPath: "/projects/chatRoom.png",
+                date: '2018-11'
             }
         }
+
     ]
 
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     return (
         <div class="projectPageContainer">
             <div className="normalPageContainer">
                 <div className='projectTitleContainer'>
-                    <div className="projectsTitle"><h2>Projects Page</h2></div>
-                    <div className="projectsTitle"> Go Top</div>
+                    {/* <div className="projectsTitle"><h2>Projects Page</h2></div> */}
+
+                </div>
+                <div className='rightBar'>
+                    {projects.map((project) =>
+                        <a href={"#" + project.id} className='barItem'>
+                            <div style={{
+                                backgroundImage: `url(${project.data.backgroundPath})`,
+                                width: '80%',
+                                height: '80%',
+                                backgroundSize: 'contain',
+                            }}></div>
+                            {project.data.title.substring(0, 4)}
+                        </a>)}
+
+                    <div onClick={scrollTop} className="projectsTitle"> Go Top</div>
                 </div>
                 <div style={{ height: '5rem' }} />
-                {projects.map((project) => <ProjectItem key={project.id} data={project.data} />)}
+                {projects.map((project) => <ProjectItem id={project.id.toString()} key={project.id} data={project.data} />)}
             </div>
         </div>
     )

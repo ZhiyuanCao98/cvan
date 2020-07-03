@@ -1,0 +1,124 @@
+.contactContainer {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 80%;
+    height: 100%;
+    z-index: 11;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.blurEffect {
+    position: fixed;
+    filter: blur(20px);
+    opacity: 0.8;
+    background: white;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: filter 0.8s, opacity 0.8s;
+    &:hover {
+        opacity:0.4;
+        filter: blur(20px);
+    }
+}
+.contactWrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 60%;
+    right: 2%;
+    bottom: 1%;
+    // background:linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    z-index: 10;
+    border-radius: 3rem;
+}
+
+.contentWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactClose {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    background: white;
+    z-index: 3;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    transition: opacity 0.5s;
+    font-family: 'Optima';
+    font-weight: 900;
+    opacity: 0.8;
+    &:hover {
+        opacity: 0.2;
+    }
+}
+
+.closeBnt {
+    z-index: 20;
+}
+
+.socialAccount {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.socialIcon {
+    font-family: 'Optima';
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    width: 3rem;
+    padding: 1vw;
+    transition: padding 0.7s;
+    margin: 1vw;
+    box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3, 0 0 4rem #2196f3;
+    &:hover {
+        padding: 1.5vw;
+    }
+}
+
+.normalInput{
+    font-family: 'Optima';
+    font-weight: 800;
+    border: none;
+    height: 1.5rem;
+    width: 12rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3;
+}
+
+.notify {
+    font-family: 'Optima';
+    font-weight: 600;
+    font-size: 1rem;
+}

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .projectPageContainer{
     // position: absolute;
     // background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A );
@@ -34,18 +38,43 @@
     font-family: 'Optima';
     font-size: 2vw;
     font-weight: 900;
+    color: #6536FF;
 }
 .projectTitle {
-    font-size: 4vw;
     position: absolute;
     top: 2%;
     left: 5%;
+    @media (min-width: 0px) {
+        font-size: 7vw;
+    }
+    @media (min-width: 400px) {
+        font-size: 6vw;
+    }
+    @media (min-width: 700px) {
+        font-size: 5vw;
+    }
+    @media (min-width: 1000px) {
+        font-size: 4vw;
+    }
 }
 
 .projectDate {
     position: absolute;
     top: 2%;
     right: 5%;
+    color: #17C8FF;
+    @media (min-width: 0px) {
+        font-size: 4vw;
+    }
+    @media (min-width: 400px) {
+        font-size: 3.5vw;
+    }
+    @media (min-width: 700px) {
+        font-size: 3vw;
+    }
+    @media (min-width: 1000px) {
+        font-size: 2.5vw;
+    }
 }
 
 .projectWord {
@@ -65,29 +94,45 @@
     width: 50%;
     font-size: 2vw;
     font-family: 'Optima';
+    @media (min-width: 0px) {
+        font-size: 3.5vw;
+    }
+    @media (min-width: 400px) {
+        font-size: 3vw;
+    }
+    @media (min-width: 700px) {
+        font-size: 2.5vw;
+    }
+    @media (min-width: 1000px) {
+        font-size: 2vw;
+    }
 }
 
+.projectTitle, .projectDate, .projectDescription {
+
+}
 
 .projectItemWrapper{
     background: white;
 }
 .projectItemContainer {
+    
     overflow: visible;
     display: flex;
     flex-direction: column;
     width: 80%;
     height: 35%;
-    margin-top: 3vw;
-    margin-bottom: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 7vw;
     align-items: center;
     background: linear-gradient(to right, #00FFFF, #17C8FF, #329BFF, #4C64FF, #6536FF, #8000FF);
     // box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3, 0 0 4rem #2196f3;
-    box-shadow: 0 0 1rem #ebde34, 0 0 2rem #ebde34;
-    padding: 0.5vw;
+    // box-shadow: 0 0 1rem #ebde34, 0 0 2rem #ebde34;
+    padding: 0.2vw;
     border-radius: 1vw;
     position: relative; 
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 5rem;
     text-decoration: none;
     font-family: 'Didot';
     font-weight: 800;
@@ -97,6 +142,7 @@
         height: 60%;
         margin-top: 5vw;
         margin-bottom: 5vw;
+        box-shadow: 0 0 1rem #ebde34, 0 0 2rem #ebde34;
     }
 }
 
@@ -111,10 +157,54 @@
     z-index: 10;
 }
 
+.rightBar {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+}
+
 .projectsTitle {
-    padding-bottom: 1vw;
     font-family: 'Didot';
     font-weight: 900;
     font-size: 2vw;
+    z-index: 5;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 1s, font-size 0.6s;
+    z-index: 1000;
+    &:hover {
+        font-size: 2.5vw;
+        opacity: 0.5;
+    }
 }
 
+.barItem {
+    text-decoration: none;
+    font-family: 'Optima';
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    border-color: black;
+    border-width: 1vw;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 1vw;
+    box-shadow: 0 0 1vw #2297f7, 0 0 2vw #2196f3;
+    scroll-behavior: smooth;
+    transition: width 1s, height 1s;
+    &:hover{
+        width: 5rem;
+        height: 5rem;
+    }
+}
