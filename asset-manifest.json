@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cvan/static/css/main.c3a987fd.chunk.css",
+    "main.js": "/cvan/static/js/main.0a74662e.chunk.js",
+    "main.js.map": "/cvan/static/js/main.0a74662e.chunk.js.map",
+    "runtime-main.js": "/cvan/static/js/runtime-main.2e77772a.js",
+    "runtime-main.js.map": "/cvan/static/js/runtime-main.2e77772a.js.map",
+    "static/js/2.10b6e74a.chunk.js": "/cvan/static/js/2.10b6e74a.chunk.js",
+    "static/js/2.10b6e74a.chunk.js.map": "/cvan/static/js/2.10b6e74a.chunk.js.map",
+    "index.html": "/cvan/index.html",
+    "precache-manifest.6f8b7f073490ae8b5dc822eff7c25c4f.js": "/cvan/precache-manifest.6f8b7f073490ae8b5dc822eff7c25c4f.js",
+    "service-worker.js": "/cvan/service-worker.js",
+    "static/css/main.c3a987fd.chunk.css.map": "/cvan/static/css/main.c3a987fd.chunk.css.map",
+    "static/js/2.10b6e74a.chunk.js.LICENSE.txt": "/cvan/static/js/2.10b6e74a.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/cvan/static/media/rootBackground.63c35517.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e77772a.js",
+    "static/js/2.10b6e74a.chunk.js",
+    "static/css/main.c3a987fd.chunk.css",
+    "static/js/main.0a74662e.chunk.js"
+  ]
+}
