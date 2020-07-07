@@ -82,7 +82,7 @@ function ProjectsPage() {
                 description: 'This program can instantly recognizes user’s facial expression from camera and generate a corresponding emoji.',
                 backgroundPath: "/projects/emojiUFace.png",
                 date: '2020-04',
-                color: '#17C8FF'
+                color: '#17c8ff'
             }
         },
         {
@@ -94,7 +94,7 @@ function ProjectsPage() {
                 description: 'Based on the pacman projects, to implement Search, multi agent and reinforcement learning',
                 backgroundPath: "/projects/pacman.png",
                 date: '2020-03',
-                color: '#17C8FF',
+                color: '#17c8ff',
             }
         },
         {
