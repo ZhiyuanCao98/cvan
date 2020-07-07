@@ -48,11 +48,11 @@ function RootPage() {
                     <animated.div style={slideInWelcome} className="welcome">
                         <h3 className="welcomeWord">WELCOM  <span style={{ paddingLeft: '5vw' }} /> TO</h3>
                         <h1 className="name"> Zhiyuan <br />Cao </h1>
-                        <h3> Software Developer</h3>
+                        <div style={{fontFamily:'Optima', fontWeight:'200'}}> Software Developer <br/> Full-Stack Developer</div>
                     </animated.div>
 
                     <animated.div style={slideInPor} className="portfolio">
-                        <h1 className="name"> PORTFOLIO </h1>
+                        <h1 className="name1"> PORTFOLIO </h1>
                     </animated.div>
                     {/* <div class="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                     <animated.div class="card1" style={{ transform: props.xy.interpolate(trans1) }} />
@@ -63,7 +63,7 @@ function RootPage() {
                 </animated.div>
                 {/* <animated.div style={{ transform: radians.interpolate(interp)}} > */}
                 <animated.div>
-                <h3 className='scroll'> ----- Scroll <AiFillDownCircle /> Down ----- </h3>
+                <h3 className='scroll'> ----- change <AiFillDownCircle /> Background ----- </h3>
                 </animated.div>
             </div>
             <HomeScrollPage />

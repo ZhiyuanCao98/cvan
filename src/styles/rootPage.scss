@@ -55,9 +55,28 @@ h3,h1 {
     }
 }
 
+.name1 {
+  font-family: "Copperplate";
+  background: linear-gradient(45deg, rgb(9, 2, 70) , #3e186d, #9198e5 , rgb(45, 99, 216));
+  background-clip: text;
+  color: transparent;
+  @media (min-width:0px) {
+    font-size: 10vw;
+  }
+  @media (min-width:400px) {
+    font-size: 12vw;
+  }
+  @media (min-width:700px) {
+    font-size: 9vw;
+  }
+  @media (min-width:1000px) {
+    font-size: 7vw;
+  }
+}
+
 .portfolio{
     position: absolute;
-    bottom: 40%;
+    bottom: 30%;
     // left: 1000px;
     right: 0;
 }

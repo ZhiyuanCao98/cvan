@@ -79,7 +79,7 @@ const ContactBox = (props) => {
                         </div>
                         <div>-- or --</div>
                         <div className="socialIcon" style={{ width: '8rem' }} onClick={() => setStack(1)}>
-                            <MdContactMail style={{ color: '#16de31' }} size={40} />
+                            <MdContactMail style={{ color: '#7326ad' }} size={40} />
                             <div> Levae A message </div>
                         </div>
                     </div>
@@ -166,11 +166,13 @@ function SideBar() {
     const closeContact = () => {
         setContactShow(!contactShow);
     }
+
+    
     return (
         <div>
             <div className="sideBarContainer">
                 <animated.div style={nameSlide} className="nameLogo">
-                    <Link className="nameLink" exact to="/" ><h1>Zhiyuan<br />Cao</h1> </Link>
+                    <Link className="nameLink" exact to="/" ><h1><span className='nameInit'>Z</span>hiyuan<br /><span className='nameInit'>C</span>ao</h1> </Link>
                 </animated.div>
                 {fold ?
                     <div>
@@ -203,7 +205,7 @@ function SideBar() {
                                 className="navFont"
                                 onMouseMove={({ clientX: x, clientY: y }) => setMeumprops3({ xys: calc(x, y) })}
                                 onMouseLeave={() => setMeumprops3({ xys: [0, 0, 1] })}
-                                style={{ transform: meumprops3.xys.interpolate(trans) }}
+                                style={{ transform: meumprops3.xys.interpolate(trans), cursor: 'pointer' }}
                                 onClick={closeContact}
                             >
                                 Contact

@@ -1,0 +1,422 @@
+.fullScreen {
+    // position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x:hidden;
+    background-image: url('./images/lowpoly.jpg');
+    background-size: cover;
+    z-index: 3;
+}
+
+.fixFullScreen {
+    top: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    z-index: 1;
+    box-shadow: 0.8rem 0.2rem 4rem black, 0.8rem 0.2rem 4rem #71aaf5, 2rem 2rem 18rem #71aaf5,2rem 2rem 30rem #71aaf5;
+    @media (min-width: 1300px) {
+        box-shadow: none;
+    }
+}
+  
+
+.aboutMe {
+    background-image: url('./images/darkBack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video {
+    position: absolute;
+    right: 0%;
+    min-width: 110%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0 
+}
+
+.scrollDownVert {
+    position: absolute;
+    // writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    right:45%;
+    bottom: 3%;
+    font-family: 'Optima';
+    font-weight: 900;
+    // z-index: 1;
+    transform-origin: bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-7;
+}
+
+@keyframes bounce-7 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.filmed {
+    position: absolute;
+    right: 5%;
+    font-size: 1rem;
+    top: 4%;
+    z-index: 11;
+}
+
+.aboutme {
+    font-size: 10vw;
+    margin-bottom: 3vw;        
+}
+
+.loveSlogn {
+    margin-left: 5vw;
+    font-family: 'Optima';
+    font-size: 3vw;
+    font-weight: 700vw;
+    color: #2297f7;
+}
+
+.sectionId {
+    position: absolute;
+    top: 120%;
+    right: 0%;
+    z-index: 2;
+}
+
+.sectionId2 {
+    position: absolute;
+    top: 220%;
+    right: 0%;
+    z-index: 2;
+}
+
+.sectionId3 {
+    position: absolute;
+    top: 310%;
+    right: 0%;
+    z-index: 2;
+}
+
+.idtitle {
+    color: #eb34c6;
+    font-weight: 900;
+    font-size: 2.5vw;
+    font-family: 'Verdana';
+    box-shadow: 0.8rem 0.2rem 0.8rem #2297f7, 0.8rem 0.2rem 0.8rem #71aaf5;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 1vw;
+    padding-right: 0;
+    &:hover {
+        background: linear-gradient(45deg, rgb(9, 2, 70) , #3e186d, #9198e5 , rgb(45, 99, 216));
+        cursor: none;
+    }
+    @media (max-width: 650px) {
+        font-size: 4vw;
+    }
+}
+
+.dash {
+    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, rgb(9, 2, 70) , #3e186d, #9198e5 , rgb(45, 99, 216));
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    @media (max-width: 650px) {
+        font-size: 4vw;
+    }
+}
+
+.sectionTitle {
+    font-size: 5vw;
+    font-family: 'Optima';
+    font-weight: 800;
+    @media (max-width: 650px) {
+        font-size: 10vw;
+    }
+}
+
+.sectionTitle2 {
+    font-size: 4vw;
+    font-family: 'Optima';
+    font-weight: 800;
+    @media (max-width: 650px) {
+        font-size: 7vw;
+    }
+}
+
+.introduceContainer {
+    width: 48%;
+    overflow: wrap;
+    margin-top: 20%;
+    @media (max-width: 650px) {
+        margin-top: 50%;
+        width: 80%;
+    }
+}
+
+.introduceName {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'STKaiti';
+    font-weight: 900;
+    color: #140136;
+}
+
+.introduceDescription {
+    color: #928c9c;
+    text-align: justify;
+    font-weight: 500;
+    font-family: 'Optima';
+}
+
+.verticalDisable {
+    overflow-x:hidden;
+}
+
+.personImage {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('./images/me2.jpeg');
+    margin-top: 1rem;
+
+    @media (max-width: 800px) {
+        width: 50%;
+        height: 40%;
+    }
+    @media (max-width: 650px) {
+        width: 80%
+    }
+    box-shadow: 0rem 0rem 1rem black, 0rem 1rem 1rem #71aaf5;
+}
+
+.workContainer {
+    position: absolute;
+    top: 220%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    // background-color: green;
+}
+
+.experience {
+    width: 43%;
+    height: 25%;
+    margin: 1rem;
+    z-index: 2;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    // border: solid black 3px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0.5rem 0.2rem 0.8rem #9198e5;
+    &:hover{
+        box-shadow: 0.5rem 0.2rem 0.8rem #2297f7, 0.8rem 0.2rem 0.8rem #71aaf5;
+    }
+    @media (max-width: 800px) {
+        width: 80%;
+        height: 15%;
+        margin-top: 2rem;
+        margin: 0.5rem;
+    }
+}
+
+.experienceHeaderContainer {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid black 2px;
+    font-size: 1.5vw;
+    font-weight: 500;
+    background: linear-gradient(135deg,#b3e2fc,#dcf7f4,#e9f5ec, #e9ebf5, #f7dced);
+    box-shadow: 0.5rem 0.2rem 0.8rem #b3e2fc;
+    @media (max-width: 800px) {
+        font-size: 2vw;
+    }
+}
+
+.experienceTime{
+    font-family: 'Optima';
+}
+
+.experienceTitle {
+    font-family: 'Optima';
+    font-weight: 800;
+}
+
+.companyLogo {
+    width: 2.5rem;
+    height: 90%;
+    background-size: contain;
+    // border-radius: 1vw;
+    background-repeat: no-repeat;
+    // margin-left: 0.2vw;
+}
+
+.skillLogo {
+    margin-top:10%;
+    height: 100%;
+    width: 15%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.experienceDescription {
+    padding: 0.5vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.skillAllItemContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.skillSetLanguageContainer {
+    margin-top: 15%;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
+    // background: black;
+}
+
+.skillSetFrameWorkContainer {
+    margin-top: 10%;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+
+.skillSetSectionTitle {
+    font-weight: 900;
+    width: 90%;
+    height: 10%;
+    font-family: 'Copperplate';
+    font-size: 2rem;
+    // border-bottom: solid 2px purple;
+}
+
+.skillSetLanguageItemContainer {
+    width: 40%;
+    height: 30%;
+    // background: purple;
+    margin: 0.5rem;
+    margin-right:2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.skillSetFrameworkItemContainer {
+    width: 25%
+}
+
+.skillSetRightPart {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    flex-wrap: nowrap;
+}
+
+.skillHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skillBlankPerc {
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+    margin-top: 0.3vw;
+    border-radius: 1rem;
+    box-shadow: 0.8rem 1rem 2.5rem black;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.skillOccupyPerc {
+    background: linear-gradient(120deg, #63cdeb,#07b516);
+    height: 100%;
+    width: 20%;
+    animation: slidein1 7s ease-in-out 2s infinite running;
+    
+    // animation-duration: 3s;
+    // animation: light 5s linear;
+    // animation: 3s ease-in 1s 2 reverse both paused slidein;
+}
+
+
+
+.skillFrameworkOccupyPerc {
+    background: linear-gradient(120deg, #e964ed,#58278a);
+    animation: slidein 7s ease-in-out 2s infinite running;
+}
+
+.skillName {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-left: 5%;
+    font-family: 'Optima';
+}
+
+.frameworkName{
+    font-size: 2vw;
+}
+
+.skillYear {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Optima';
+}
+
+.skillPercNum {
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: 'Optima';
+}
+
+
+.frameworkPerNum {
+    font-size: 2vw;
+}
+
+
+@keyframes light {
+    100% {
+      transform: translate3d(50%, 50%, 0);
+    }
+}
+
+@keyframes slidein {
+    from { transform: translate3d(-50px,0, 0px); }
+    to   { transform: translate3d(0,0,20px); }
+  }
+
+@keyframes slidein1 {
+    from { transform: translate3d(-120px,0, 0px) skew(90deg); }
+    to   { transform: translate3d(0,0,20px) skew(0); }
+  }

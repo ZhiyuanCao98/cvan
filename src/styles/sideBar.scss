@@ -102,7 +102,14 @@
 }
 
 .navFont {
+  color: #28044a;
+  &:hover {
+    color: #7321d1;
+  }
+}
 
+.nameInit {
+  color: #0998b5;
 }
 
 .dropDownMenu {
