@@ -17,6 +17,11 @@ const BackgroundVideo = () => {
         </div>
     )
 }
+
+const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 function AboutPage() {
     const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
     const slideInWelcome = useSpring({ config: { duration: 1000 }, from: { left: '-60%' }, left: '0%' })
@@ -250,14 +255,14 @@ function AboutPage() {
                     </div>
 
                     <div className='skillSetFrameWorkContainer'>
-                        <div className="skillSetSectionTitle">Framework & Library</div>
+                        <div className="skillSetSectionTitle skillSetSectionTitle2">Framework & Library</div>
                         {skillSetFramework.map((l) =>
                             <div id={l.id} className='skillSetLanguageItemContainer skillSetFrameworkItemContainer'>
                                 <div className='skillLogo' style={{ backgroundImage: `url(${l.data.logo})` }}></div>
                                 <div className="skillSetRightPart">
                                     <div className='skillHeader'>
                                         <span className='skillName frameworkName'>{l.data.name}</span>
-                                        <span className='skillYear'>{l.data.year} Year</span>
+                                        <span className='skillYear frameYear1'> {l.data.year}  <span className='frameYear'>Year</span></span>
                                         <span className="skillPercNum frameworkPerNum">{l.data.perc}</span>
                                     </div>
                                     <div className='skillBlankPerc'> <div className='skillOccupyPerc skillFrameworkOccupyPerc' style={{ width: `${l.data.perc}` }}></div> </div>
@@ -265,7 +270,18 @@ function AboutPage() {
                             </div>)}
                     </div>
                 </div>
+                
+            
             </div>
+            <div className="fullScreen1">
+            </div>
+            <div className="fullScreen2">
+                <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'center'}}>
+                <div onClick={scrollTop} className="projectsTitle"> Go Top</div>
+                </div>
+            </div>
+
+           
         </div>
     )
 }
