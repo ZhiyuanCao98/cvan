@@ -17,14 +17,20 @@
     background-size: cover;
     z-index: 3;
 
-    @media (max-width: 800px) {
-        height: 30vh;
+    @media (max-width: 1000px) {
+        height: 10vh;
     }
     @media (max-width: 750px) {
-        height: 20vh;
+        height: 5vh;
     }
     @media (max-width: 650px) {
         height: 80vh;
+    }
+    @media (max-width: 550px) {
+        height: 60vh;
+    }
+    @media (max-width: 250px) {
+        height: 100vh;
     }
 }
 
@@ -63,11 +69,11 @@
 }
   
 
-.aboutMe {
-    background-image: url('./images/darkBack.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+// .aboutMe {
+//     background-image: url('./images/darkBack.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
 
 .video {
     position: absolute;
@@ -108,12 +114,17 @@
     right: 5%;
     font-size: 1rem;
     top: 4%;
-    z-index: 11;
+    z-index: 18;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutme {
     font-size: 10vw;
-    margin-bottom: 3vw;        
+    margin-bottom: 3vw; 
+    @media (max-width: 650px) {
+        font-size: 20vw;
+    }       
 }
 
 .loveSlogn {
@@ -121,7 +132,12 @@
     font-family: 'Optima';
     font-size: 3vw;
     font-weight: 700vw;
-    color: #2297f7;
+    background: linear-gradient(66deg,rgb(45, 99, 216),#9198e5,  #3e186d, );
+    background-clip: text;
+    color: transparent;
+    @media (max-width: 650px) {
+        font-size: 5vw;
+    }  
 }
 
 .sectionId {
@@ -200,6 +216,14 @@
     margin-top: 20%;
     @media (max-width: 650px) {
         margin-top: 50%;
+        width: 80%;
+    }
+    @media (max-width: 550px) {
+        margin-top: 60%;
+        width: 80%;
+    }
+    @media (max-width: 450px) {
+        margin-top: 80%;
         width: 80%;
     }
 }
@@ -343,6 +367,9 @@
     @media (max-width: 650px) {
         margin-top: 35%;
     }
+    @media (max-width: 450px) {
+        margin-top: 45%;
+    }
 }
 
 .skillSetFrameWorkContainer {
@@ -355,6 +382,18 @@
     justify-content: center;   
     @media (max-width: 650px) {
         margin-top: 100%;
+    }
+    @media (max-width: 500px) {
+        margin-top: 120%;
+    }
+    @media (max-width: 420px) {
+        margin-top: 140%;
+    }
+    @media (max-width: 350px) {
+        margin-top: 180%;
+    }
+    @media (max-width: 250px) {
+        margin-top: 220%;
     }
 }
 
@@ -393,6 +432,12 @@
     width: 25%;
     @media (max-width: 650px) {
         width: 40%;
+    }
+    @media (max-width: 500px) {
+        width: 30%;
+    }
+    @media (max-width: 250px) {
+        width: 60%;
     }
 }
 
@@ -495,10 +540,10 @@
 }
 
 .goTop {
-    width: 13%;
+    // width: 13%;
     font-size: 2rem;
     cursor: pointer;
-    box-shadow: 1rem 1rem 1rem black;
+    box-shadow: 1rem 1rem 3rem black;
 }
 
 
@@ -517,3 +562,4 @@
     from { transform: translate3d(-120px,0, 0px) skew(90deg); }
     to   { transform: translate3d(0,0,20px) skew(0); }
   }
+

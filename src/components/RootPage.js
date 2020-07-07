@@ -63,7 +63,7 @@ function RootPage() {
                 </animated.div>
                 {/* <animated.div style={{ transform: radians.interpolate(interp)}} > */}
                 <animated.div>
-                <h3 className='scroll'> ----- change <AiFillDownCircle /> Background ----- </h3>
+                <h3 className='scroll'>change <AiFillDownCircle /> Background</h3>
                 </animated.div>
             </div>
             <HomeScrollPage />

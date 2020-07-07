@@ -2,15 +2,27 @@ html {
     scroll-behavior: smooth;
 }
 
-.projectPageContainer{
+.projectPageContainer {
     position: absolute;
     // background: linear-gradient(135deg, #B721FF, #2AF598, #fec051, #FEE140, #FA709A );
-    background-image: url('./images/projectBackGround.png');
+    background-image: url("./images/projectBackGround.png");
     height: 260%;
     width: 100%;
-	background-size: 300%;
+    background-size: 300%;
     background-repeat: repeat;
     // z-index: 122;
+    @media (max-width: 1000px) {
+        height: 250%;
+    }
+    @media (max-width: 900px) {
+        height: 230%;
+    }
+    @media (max-width: 650px) {
+        height: 220%;
+    }
+    @media (max-width: 375px) {
+        height: 210%;
+    }
 }
 
 .projectItem {
@@ -23,11 +35,12 @@ html {
         filter: blur(0px);
     }
 }
-.projectTitle, .projectDate{
-    font-family: 'Optima';
+.projectTitle,
+.projectDate {
+    font-family: "Optima";
     font-size: 2vw;
     font-weight: 900;
-    color: #6536FF;
+    color: #6536ff;
 }
 .projectTitle {
     position: absolute;
@@ -51,7 +64,7 @@ html {
     position: absolute;
     top: 2%;
     right: 5%;
-    color: #17C8FF;
+    color: #17c8ff;
     @media (min-width: 0px) {
         font-size: 4vw;
     }
@@ -82,7 +95,7 @@ html {
     left: 5%;
     width: 55%;
     font-size: 2vw;
-    font-family: 'Optima';
+    font-family: "Optima";
     @media (min-width: 0px) {
         font-size: 3.5vw;
     }
@@ -97,15 +110,15 @@ html {
     }
 }
 
-.projectTitle, .projectDate, .projectDescription {
-
+.projectTitle,
+.projectDate,
+.projectDescription {
 }
 
-.projectItemWrapper{
+.projectItemWrapper {
     background: white;
 }
 .projectItemContainer {
-    
     overflow: visible;
     display: flex;
     flex-direction: column;
@@ -114,16 +127,16 @@ html {
     margin-top: 2vw;
     margin-bottom: 7vw;
     align-items: center;
-    background: linear-gradient(to right, #00FFFF, #17C8FF, #329BFF, #4C64FF, #6536FF, #8000FF);
+    background: linear-gradient(to right, #00ffff, #17c8ff, #329bff, #4c64ff, #6536ff, #8000ff);
     // box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3, 0 0 4rem #2196f3;
     // box-shadow: 0 0 1rem #ebde34, 0 0 2rem #ebde34;
     padding: 0.2vw;
     border-radius: 1vw;
-    position: relative; 
+    position: relative;
     margin-left: 3rem;
     margin-right: 5rem;
     text-decoration: none;
-    font-family: 'Didot';
+    font-family: "Didot";
     font-weight: 800;
     color: black;
     transition: height 1s, margin-top 1s;
@@ -159,9 +172,9 @@ html {
 }
 
 .projectsTitle {
-    font-family: 'Didot';
+    font-family: "Didot";
     font-weight: 900;
-    font-size: 2vw;
+    font-size: 1.5rem;
     z-index: 5;
     cursor: pointer;
     animation: fadeIn 0.3s;
@@ -171,11 +184,27 @@ html {
         font-size: 2.5vw;
         opacity: 0.5;
     }
+    // @media (max-width:380px) {
+    //     font-size: 5vw;
+    // }
+}
+
+.smallTitle {
+    color: black;
+    @media (max-width: 850px) {
+        font-size: 2vw;
+    }
+    @media (max-width: 480px) {
+        font-size: 3vw;
+    }
+    @media (max-width: 340px) {
+        font-size: 4vw;
+    }
 }
 
 .barItem {
     text-decoration: none;
-    font-family: 'Optima';
+    font-family: "Optima";
     font-weight: 900;
     display: flex;
     flex-direction: column;
@@ -184,17 +213,17 @@ html {
     z-index: 6;
     border-color: black;
     border-width: 1vw;
-    border-radius: 1vw;
+    border-radius: 3vw;
     font-size: 1.5vw;
     width: 3rem;
     height: 3rem;
     padding: 0.5rem;
     margin: 1vw;
-    box-shadow: 0 0 1vw #2297f7, 0 0 2vw #2196f3;
+    box-shadow: 0 0 1vw #2297f7, 0 0 2vw #2196f3, 0 0 4vw #8000ff;
     scroll-behavior: smooth;
     transition: width 1s, height 1s;
-    &:hover{
-        width: 5rem;
-        height: 5rem;
+    &:hover {
+        width: 4.5rem;
+        height: 4.5rem;
     }
 }

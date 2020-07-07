@@ -182,7 +182,7 @@ function AboutPage() {
 
                     </animated.div>
                 </animated.div>
-                <div className="filmed">Filmed in <span style={{ fontWeight: '900' }}>Northeastern University</span>, Boston, 2019</div>
+                <div className="filmed"><span>Filmed in</span> <span style={{ fontWeight: '900' }}>Northeastern University,</span><span>Boston, 2019</span></div>
                 <div className="scrollDownVert">Scroll Down </div>
             </div>
 
@@ -277,7 +277,7 @@ function AboutPage() {
             </div>
             <div className="fullScreen2">
                 <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'center'}}>
-                <div onClick={scrollTop} className="projectsTitle"> Go Top</div>
+                <div onClick={scrollTop} className="projectsTitle goTop"> Go Top</div>
                 </div>
             </div>
 

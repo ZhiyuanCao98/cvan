@@ -153,7 +153,7 @@ function ProjectsPage() {
                                 height: '80%',
                                 backgroundSize: 'contain',
                             }}></div>
-                            {project.data.title.substring(0, 4)}
+                            <div className='smallTitle'>{project.data.title.substring(0, 4)}</div>
                         </a>)}
 
                     <div onClick={scrollTop} className="projectsTitle"> Go Top</div>
