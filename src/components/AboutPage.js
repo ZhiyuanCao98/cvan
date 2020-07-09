@@ -251,7 +251,7 @@ function AboutPage() {
                             </div>)}
                     </div>
 
-                    <div className='skillSetFrameWorkContainer test1'>
+                    <div className='skillSetFrameWorkContainer'>
                         <div className="skillSetSectionTitle skillSetSectionTitle2 ">Framework & Library</div>
                         {skillSetFramework.map((l) =>
                             <div id={l.id} className='skillSetLanguageItemContainer skillSetFrameworkItemContainer '>
