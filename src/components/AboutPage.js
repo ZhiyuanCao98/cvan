@@ -199,9 +199,6 @@ function AboutPage() {
                 <br />
                 I have a solid background in applied mathematics and computer science, and I demonstrated the strong ability to transfer my knowledge
                 from the classroom into real-world practice during my three co-op opportunities.
-                <br />
-                I enjoyed the industrial atmosphere and built up my communication skills.
-
                         </div>
 
                     </div>
@@ -212,7 +209,7 @@ function AboutPage() {
             <div className="fullScreen">
                 <div className='sectionId2 idtitle'> 02 <span className='dash'>——</span></div>
                 <div className='sectionId2 dash sectionTitle2' style={{ right: '15%' }}> Work Experience</div>
-                <div className="normalPageContainer workContainer">
+                <div className="workContainer">
                     {workExperience.map((e) =>
                         <a href="https://drive.google.com/file/d/1_Jwm8OBix1olmj43o93aeUzFrE4xm8r2/view?usp=sharing"
                             target="_blank"
@@ -238,7 +235,7 @@ function AboutPage() {
                 <div className='sectionId3 idtitle'> 03 <span className='dash'>——</span></div>
                 <div className='sectionId3 dash sectionTitle' style={{ right: '15%' }}>SKILL SET</div>
                 <div className='normalPageContainer'>
-                    <div className='skillSetLanguageContainer'>
+                    <div className='skillSetLanguageContainer '>
                         <div className="skillSetSectionTitle">Languages</div>
                         {skillSetLanguage.map((l) =>
                             <div id={l.id} className='skillSetLanguageItemContainer'>
@@ -254,10 +251,10 @@ function AboutPage() {
                             </div>)}
                     </div>
 
-                    <div className='skillSetFrameWorkContainer'>
-                        <div className="skillSetSectionTitle skillSetSectionTitle2">Framework & Library</div>
+                    <div className='skillSetFrameWorkContainer test1'>
+                        <div className="skillSetSectionTitle skillSetSectionTitle2 ">Framework & Library</div>
                         {skillSetFramework.map((l) =>
-                            <div id={l.id} className='skillSetLanguageItemContainer skillSetFrameworkItemContainer'>
+                            <div id={l.id} className='skillSetLanguageItemContainer skillSetFrameworkItemContainer '>
                                 <div className='skillLogo' style={{ backgroundImage: `url(${l.data.logo})` }}></div>
                                 <div className="skillSetRightPart">
                                     <div className='skillHeader'>

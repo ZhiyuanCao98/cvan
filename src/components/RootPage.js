@@ -46,7 +46,7 @@ function RootPage() {
                 <animated.div className="normalPageContainer" style={{ transform: props.xy.interpolate(trans1) }}
                     onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                     <animated.div style={slideInWelcome} className="welcome">
-                        <h3 className="welcomeWord">WELCOM  <span style={{ paddingLeft: '5vw' }} /> TO</h3>
+                        <h3 className="welcomeWord">WELCOME  <span style={{ paddingLeft: '5vw' }} /> TO</h3>
                         <h1 className="name"> Zhiyuan <br />Cao </h1>
                         <div style={{fontFamily:'Optima', fontWeight:'200'}}> Software Developer <br/> Full-Stack Developer</div>
                     </animated.div>

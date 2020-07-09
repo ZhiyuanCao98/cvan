@@ -11,26 +11,15 @@
 .fullScreen1 {
     // position:relative;
     width: 100%;
-    height: 20vh;
+    height: 0vh;
     overflow-x:hidden;
     background-image: url('./images/lowpoly.jpg');
     background-size: cover;
     z-index: 3;
 
-    @media (max-width: 1000px) {
-        height: 10vh;
-    }
-    @media (max-width: 750px) {
-        height: 5vh;
-    }
+
     @media (max-width: 650px) {
-        height: 80vh;
-    }
-    @media (max-width: 550px) {
-        height: 60vh;
-    }
-    @media (max-width: 250px) {
-        height: 100vh;
+        height: 40vh;
     }
 }
 
@@ -127,6 +116,9 @@
     }       
 }
 
+.test1{
+    background: pink;
+}
 .loveSlogn {
     margin-left: 5vw;
     font-family: 'Optima';
@@ -142,14 +134,14 @@
 
 .sectionId {
     position: absolute;
-    top: 120%;
+    top: 110%;
     right: 0%;
     z-index: 2;
 }
 
 .sectionId2 {
     position: absolute;
-    top: 220%;
+    top: 210%;
     right: 0%;
     z-index: 2;
 }
@@ -213,18 +205,17 @@
 .introduceContainer {
     width: 48%;
     overflow: wrap;
-    margin-top: 20%;
+    margin-top: 10%;
     @media (max-width: 650px) {
-        margin-top: 50%;
+        margin-top: 40%;
         width: 80%;
     }
     @media (max-width: 550px) {
-        margin-top: 60%;
+        margin-top: 45%;
         width: 80%;
     }
     @media (max-width: 450px) {
-        margin-top: 80%;
-        width: 80%;
+        margin-top: 60%;
     }
 }
 
@@ -267,13 +258,15 @@
 
 .workContainer {
     position: absolute;
-    top: 220%;
+    left: 20%;
+    top: 215%;
+    width: 80%;
+    height: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    // background-color: green;
 }
 
 .experience {
@@ -354,26 +347,30 @@
 }
 
 .skillSetLanguageContainer {
-    margin-top: 15%;
+    position: absolute;
+    top: 15%;
+    // margin-top: 15%;
     height: 40%;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;    
-    @media (max-width: 800px) {
-        margin-top: 25%;
-    }
+    // @media (max-width: 800px) {
+    //     margin-top: 25%;
+    // }
     @media (max-width: 650px) {
-        margin-top: 35%;
+        height:60%;
+        top: 18%;
     }
-    @media (max-width: 450px) {
-        margin-top: 45%;
-    }
+    // @media (max-width: 450px) {
+    //     margin-top: 45%;
+    // }
 }
 
 .skillSetFrameWorkContainer {
-    margin-top: 10%;
+    position: absolute;
+    top: 60%;
     height: 40%;
     width: 100%;
     display: flex;
@@ -381,19 +378,8 @@
     flex-wrap: wrap;
     justify-content: center;   
     @media (max-width: 650px) {
-        margin-top: 100%;
-    }
-    @media (max-width: 500px) {
-        margin-top: 120%;
-    }
-    @media (max-width: 420px) {
-        margin-top: 140%;
-    }
-    @media (max-width: 350px) {
-        margin-top: 180%;
-    }
-    @media (max-width: 250px) {
-        margin-top: 220%;
+        top: 85%;
+        height: 50%;
     }
 }
 
@@ -417,27 +403,25 @@
 
 .skillSetLanguageItemContainer {
     width: 40%;
-    height: 30%;
+    height: 26%;
     // background: purple;
-    margin: 0.5rem;
+    // margin: 0.5rem;
     margin-right:2rem;
     display: flex;
     flex-direction: row;
     @media (max-width: 650px) {
         width: 80%;
+        height: 15%;
+        margin-right:1rem;
     }
 }
 
 .skillSetFrameworkItemContainer {
     width: 25%;
+    height: 30%;
     @media (max-width: 650px) {
         width: 40%;
-    }
-    @media (max-width: 500px) {
-        width: 30%;
-    }
-    @media (max-width: 250px) {
-        width: 60%;
+        height: 20%;
     }
 }
 
