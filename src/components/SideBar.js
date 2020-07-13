@@ -7,12 +7,14 @@ import { BsChevronDoubleDown } from "react-icons/bs";
 import { MdContactMail } from "react-icons/md";
 import { TiBackspaceOutline } from "react-icons/ti";
 import { IoIosMail } from "react-icons/io";
+import emailjs from 'emailjs-com';
 import {
     BrowserView,
     MobileView,
     isBrowser,
     isMobile
   } from "react-device-detect";
+
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 10, (x - window.innerWidth / 2) / 10, 1.1]
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
@@ -24,7 +26,7 @@ const ContactBox = (props) => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
-
+    const templateId = 'sendtome';
 
     // Initializing didMount as false
     const [didMount, setDidMount] = useState(false)
@@ -59,6 +61,15 @@ const ContactBox = (props) => {
         }
 
     }, [email, name])
+
+    const sendMail = () => {
+        console.log('message seding')
+        emailjs.send('mailgun', 'sendtome', {name,email,message}, 'user_HnQjDoFIAJnaqpNwnJ97O')
+        .then((response) => {
+            console.log('Successfully Received', response.status, response.text);
+        });
+        setStack(2);
+    }
 
     return (
         <div className='contactContainer'>
@@ -117,7 +128,7 @@ const ContactBox = (props) => {
                         <div><textarea value={message} onChange={e => { setMessage(e.target.value) }} className='normalInput' style={{ height: '5.5rem', resize: 'none' }} /></div>
 
 
-                        <div id="sendBtn" className="socialIcon" style={{ width: '8rem', marginBottom: 'none', filter: 'blur(3px)', cursor: 'no-drop' }} onClick={() => setStack(2)}>
+                        <div id="sendBtn" className="socialIcon" style={{ width: '8rem', marginBottom: 'none', filter: 'blur(3px)', cursor: 'no-drop' }} onClick={sendMail}>
                             <AiOutlineSend style={{ color: '#5cc760' }} size={40} />
                             <div> Send </div>
                         </div>
