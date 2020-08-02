@@ -59,7 +59,9 @@
       opacity: 1;
       padding: 0.5rem;
       border-radius: 1rem;
-      box-shadow: 0 0 1rem #2297f7, 0 0 2rem #2196f3, 0 0 4rem #2196f3;
+      box-shadow: 0 0 1rem white, 0 0 2rem white, 0 0 4rem white;
+      animation: animate 8s linear infinite;
+      // background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
       @media (min-width: 0px) {
         font-size: 4.5vw;
       }
@@ -74,7 +76,8 @@
       }
     }
     &:hover {
-      box-shadow: 0 0 1rem #ff00b7, 0 0 2rem #ff00b7, 0 0 4rem #2196f3;
+      animation: animate 8s linear infinite;
+      // box-shadow: 0 0 1rem #ff00b7, 0 0 2rem #ff00b7, 0 0 4rem #2196f3;
       text-decoration-style: solid;
       @media (min-width: 300px) {
         font-size: 4vw;
@@ -86,8 +89,38 @@
       }
       border-radius: 1rem;
     }
+    &:before{
+      content: "";
+      position: absolute;
+      top: -5px;
+      bottom: -5px;
+      right: -5px;
+      left: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      border-radius: 40px;
+      filter: blur(20px);
+      opacity: 0;
+      transition: 0.5s;
+
+    }
+    &:hover:before {
+      filter: blur(10px);
+      opacity: 1;
+      animation: animate 8s linear infinite;
+     }
   }
 }
+
+@keyframes animate {
+  0% {
+   background-position: 0%;
+  }
+  100% {
+   background-position: 400%;
+  }
+ }
 
 .sideBarContainer {
   position: fixed;

@@ -280,30 +280,30 @@ function SideBar() {
 
                             <animated.div
                                 className="navFont"
-                                onMouseMove={({ clientX: x, clientY: y }) => setMeumprops({ xys: calc(x, y) })}
-                                onMouseLeave={() => setMeumprops({ xys: [0, 0, 1] })}
+                                // onMouseMove={({ clientX: x, clientY: y }) => setMeumprops({ xys: calc(x, y) })}
+                                // onMouseLeave={() => setMeumprops({ xys: [0, 0, 1] })}
                                 style={opChange, { marginTop: '10rem', transform: meumprops.xys.interpolate(trans) }}
                             ><MeumItem to="/" title="Home" /></animated.div>
                             <animated.div
                                 className="navFont"
-                                onMouseMove={({ clientX: x, clientY: y }) => setMeumprops1({ xys: calc(x, y) })}
-                                onMouseLeave={() => setMeumprops1({ xys: [0, 0, 1] })}
+                                // onMouseMove={({ clientX: x, clientY: y }) => setMeumprops1({ xys: calc(x, y) })}
+                                // onMouseLeave={() => setMeumprops1({ xys: [0, 0, 1] })}
                                 style={{
                                     transform: meumprops1.xys.interpolate(trans)
                                 }}
                             ><MeumItem to="/about" title="About" /></animated.div>
                             <animated.div
                                 className="navFont"
-                                onMouseMove={({ clientX: x, clientY: y }) => setMeumprops2({ xys: calc(x, y) })}
-                                onMouseLeave={() => setMeumprops2({ xys: [0, 0, 1] })}
+                                // onMouseMove={({ clientX: x, clientY: y }) => setMeumprops2({ xys: calc(x, y) })}
+                                // onMouseLeave={() => setMeumprops2({ xys: [0, 0, 1] })}
                                 style={{
                                     transform: meumprops2.xys.interpolate(trans)
                                 }}
                             ><MeumItem to="/projects" title="Projects" /></animated.div>
                             <animated.div
                                 className="navFont"
-                                onMouseMove={({ clientX: x, clientY: y }) => setMeumprops3({ xys: calc(x, y) })}
-                                onMouseLeave={() => setMeumprops3({ xys: [0, 0, 1] })}
+                                // onMouseMove={({ clientX: x, clientY: y }) => setMeumprops3({ xys: calc(x, y) })}
+                                // onMouseLeave={() => setMeumprops3({ xys: [0, 0, 1] })}
                                 style={{ transform: meumprops3.xys.interpolate(trans), cursor: 'pointer' }}
                                 onClick={closeContact}
                             >
